@@ -1,0 +1,65 @@
+use admin
+mongoimport --db test --collection data --file /vagrant/mongodb_cases.json -u 'root' -p ‘Cic1234*' --authenticationDatabase 'admin'
+mongoimport --db test --collection data --file /vagrant/mongodb_cases.json -u 'root' -p ‘Cic1234*' --authenticationDatabase "admin"
+use admin
+mongoimport --db test --collection data --file /home/vagrant/mongodb_cases.json -u 'root' -p ‘Cic1234*' --authenticationDatabase "admin"
+use admin
+mongoimport --db test --collection data --file /home/vagrant/mongodb_cases.json -u 'root' -p ‘Cic1234*' --authenticationDatabase "admin"
+use admin
+mongoimport --db test --collection data --file /home/vagrant/mongodb_cases.json -u 'root' -p 'Cic1234*' --authenticationDatabase "admin"
+▰mongoimport --db test --collection data --file /vagrant/mongodb_cases.json -u 'root' -p ‘Cic1234*' --authenticationDatabase "admin“
+▰mongoimport --db test --collection data --file /home/vagrant/mongodb_cases.json -u 'root' -p 'Cic1234*' --authenticationDatabase "admin"
+use db test
+show db
+show db
+show dbs
+show dbs
+use admin
+show dbs
+use test
+show collectios
+show collection
+show collections
+db.data.drop();
+use test
+show collections
+db.enterprises.drop();
+db.groups.drop();
+use admin
+show collections
+show dbs
+use test
+show collections
+db.data.find()
+db.data.find() | grep -a
+db.data.find() | grep ser
+db.data.find() | grep -i  ser
+db.data.find().pretty()
+it
+db.data.count({age:41})
+db.data.find({age:41})
+db.data.count({age:41}).pretty()
+use admin
+use test
+db.data.find({age:41}).pretty()
+use admin
+use test
+db.data.aggregate([{$match : {age:41}}])
+db.data.aggregate([])
+db.data.find({age:41},{_id:0,"CaseCurrentStatus":1,"gender":1,"CaseDescription":1})
+db.data.aggregate([{$match : {age:41}}])
+db.data.aggregate([{$match : {CaseCurrentStatus : {$exists : false}}}]).pretty()
+db.data.find({age:41})
+db.data.aggregate([{$match : {age:41}},{$unwind : "$CasePhoneNumbers"}])
+db.data.aggregate([{$match : {age:41}},{$unwind : "$CasePhoneNumbers"}]).pretty()
+use test
+db.data.aggregate([{$match : {age:41}}])
+db.data.aggregate([{$match : {age:41}}]).pretty()
+use test
+db.data.aggregate([{$match : {age:41}}]).pretty()
+db.data.aggregate([{$match : {age:41}},{$unwind : "$CasePhoneNumbers"}])
+db.data.aggregate([{$match : {age:41}},{$unwind : "$CasePhoneNumbers"}]).pretty()
+db.data.find()
+db.grups.find()
+db.groups.aggregate([{  $match : {"active" : true  }},{$project : {id:1, _id:0, lastModified:1,  Empresa : "$serviceProviderId"  }}])
+db.groups.find()
